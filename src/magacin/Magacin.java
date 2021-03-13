@@ -9,19 +9,25 @@ public class Magacin implements MagacinInterface{
 
 	@Override
 	public void dodajArtikal(Artikal artikal) {
-		// TODO Auto-generated method stub
-		
+		artikli.add(artikal);
 	}
 
 	@Override
-	public void izbaciArtikal(int kolicina) {
-		// TODO Auto-generated method stub
-		
+	public void izbaciArtikal(Artikal artikal) {
+		for(Artikal a: artikli)
+			if (a.getSifra()==artikal.getSifra()) {
+				a.setKolicina(artikal.getKolicina()-1);
+			}
 	}
 
 	@Override
 	public Artikal pronadjiArtikal(int sifra) {
-		// TODO Auto-generated method stub
+		
+		for(Artikal a: artikli) 
+			if (a.getSifra()==sifra) {
+				return a;
+			}
 		return null;
+		
 	}
 }
