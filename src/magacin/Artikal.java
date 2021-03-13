@@ -1,10 +1,10 @@
 package magacin;
 
 public class Artikal {
-	public String naziv;
-	public int sifra;
-	public String opis;
-	public int kolicina;
+	private String naziv;
+	private int sifra;
+	private String opis;
+	private int kolicina;
 	public String getNaziv() {
 		return naziv;
 	}
